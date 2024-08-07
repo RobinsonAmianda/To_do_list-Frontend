@@ -14,7 +14,7 @@ const Userlogin = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(config.backendURL {
+      const response = await fetch(config.backendURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
