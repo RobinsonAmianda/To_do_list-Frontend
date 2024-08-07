@@ -26,7 +26,7 @@ const Userlogin = () => {
         toast.success("Successfully signed in", {
           autoClose: 100,
           onClose: () => {
-          navigate ( "/Userhomepage" );
+          navigate ( "/home" );
           },
         });
       } else {
