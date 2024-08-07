@@ -3,6 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import '../Styling/pages/Login.css';
 import { useNavigate } from "react-router-dom";
+import config from "../config/config";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const Signup = () => {
   const handleAddUser = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("backendURL", {
+      const response = await fetch(config.backendURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

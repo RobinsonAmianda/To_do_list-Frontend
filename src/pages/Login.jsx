@@ -3,6 +3,7 @@ import '../Styling/pages/Login.css';
 import { ToastContainer, toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
+import config from "../config/config"
 
 const Userlogin = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ const Userlogin = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("backendURL", {
+      const response = await fetch(config.backendURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
