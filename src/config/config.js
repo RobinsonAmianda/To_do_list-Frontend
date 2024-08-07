@@ -1,4 +1,4 @@
-// src/config.js
+// src/config/config.js
 const config = {
     backendURL: "the url for the backend",
   };
