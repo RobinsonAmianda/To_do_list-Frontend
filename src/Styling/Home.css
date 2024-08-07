@@ -1,0 +1,109 @@
+/* Styling/Home.css */
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #6C757D;
+  --background-color: #f8f9fa;
+  --text-color: #343a40;
+  --border-color: #dee2e6;
+  --success-color: #28a745;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: var(--background-color);
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  border-right: 1px solid var(--border-color);
+}
+
+.task-list-container {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+.task-list-container form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.task-list-container input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.task-list-container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.task-list-container button:hover {
+  background-color: #0056b3;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.task-list li.pending {
+  background-color: #f9f9f9;
+}
+
+.task-list li.complete {
+  background-color: var(--success-color);
+  color: white;
+  text-decoration: line-through;
+}
+
+.task-list li button {
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.task-list li button:hover {
+  color: #0056b3;
+}
