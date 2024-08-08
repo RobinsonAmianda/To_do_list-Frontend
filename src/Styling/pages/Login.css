@@ -21,8 +21,10 @@
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  text-align: center; /* Center align the text */
+  width: 100%; /* Make container width 100% */
+  max-width: 400px; /* Set max-width to limit the width */
+  text-align: left; /* Align the text to the left */
+  margin: 0 auto; /* Center the container */
 }
 
 .container h2 {
@@ -30,36 +32,29 @@
   font-size: 24px;
   color: #333;
   font-weight: bold;
+  text-align: center; /* Center align the heading */
 }
 
 .form-group {
   display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Align items to the center */
+  flex-direction: column; /* Stack label and input vertically */
   margin-bottom: 20px;
 }
 
 .form-group label {
-  width: 100px; /* Set a fixed width for the label */
-  margin-right: 10px; /* Add some space between the label and input */
+  margin-bottom: 5px; /* Add space between label and input */
   font-size: 16px;
   color: #555;
   font-weight: bold; /* Make label text bold */
   text-align: left; /* Align text to the left */
-  display: flex; /* Use flexbox to align icon and text */
-  align-items: center; /* Center align the icon and text */
-}
-
-.form-group label i {
-  font-size: 20px; /* Adjust icon size */
-  margin-right: 8px; /* Add some space between the icon and label text */
 }
 
 .form-group input {
-  flex: 1; /* Allow input to take remaining space */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  width: 100%; /* Make input width 100% */
 }
 
 button[type="submit"] {
@@ -71,6 +66,7 @@ button[type="submit"] {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%; /* Make button width 100% */
 }
 
 button[type="submit"]:hover {
