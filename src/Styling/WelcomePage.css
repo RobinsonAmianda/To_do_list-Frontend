@@ -7,7 +7,7 @@
   
   /* Generic Styles End */
   
-  .wrapper {
+  .wrapper1 {
     background-color: white;
     width: 430px;
     height: auto; /* Adjust height automatically */
@@ -17,7 +17,7 @@
     padding: 10px; /* Reduced padding to make space for the image */
   }
   
-  .container {
+  .container1 {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;

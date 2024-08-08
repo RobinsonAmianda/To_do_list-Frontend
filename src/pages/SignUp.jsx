@@ -27,22 +27,9 @@ const Signup = () => {
       const data = await response.json();
       if (data.success) {
         toast.success(data.message);
-        // fetchUsers();
+        navigate("/home");
       } else {
         toast.error(data.message);
-      }
-
-      if (response.ok) {
-        
-        
-        toast.success("Successfully signed in", {
-          autoClose: 100,
-          onClose: () => {
-            navigate ("/home");
-          },
-        });
-      } else {
-        toast.error("Invalid email or password");
       }
 
     } catch (error) {
@@ -51,12 +38,9 @@ const Signup = () => {
   };
 
   return (
-    <>
-    <div className="wrapper">
-      <div className="container">
+    <div className="login-container">
+      <div className="login-form">
         <h2>Sign Up</h2>
-        <br />
-       
         <form onSubmit={handleAddUser}>
           <div className="form-group">
             <label htmlFor="username">Username</label>
@@ -91,17 +75,13 @@ const Signup = () => {
               required
             />
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit" className="login-button" >Sign Up</button>
         </form>
-
         <br />
-
         <p>Already have an account? <a href="/login">Log in</a></p>
       </div>
-
       <ToastContainer />
     </div>
-    </>
   );
 };
 
