@@ -1,11 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import '../Styling/pages/Login.css';
 import { ToastContainer, toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
-import config from "../config/config"
+import config from "../config/config";
 
-const Userlogin = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ const Userlogin = () => {
         toast.success("Successfully signed in", {
           autoClose: 100,
           onClose: () => {
-          navigate ( "/home" );
+            navigate("/home");
           },
         });
       } else {
@@ -38,13 +38,10 @@ const Userlogin = () => {
     }
   };
 
-  console.log("Userlogin component rendered");
-
   return (
-    <div className="wrapper">
-      <div className="container">
+    <div className="login-container">
+      <div className="login-form">
         <h2>Sign In</h2>
-       
         <form onSubmit={handleSignIn}>
           <div className="form-group">
             <label htmlFor="email">Email</label>
@@ -70,7 +67,7 @@ const Userlogin = () => {
               required
             />
           </div>
-          <button type="submit">Sign In</button>
+          <button type="submit" className="login-button">Sign In</button>
         </form>
         <br />
         <p>No account? <Link to="/signup">Signup</Link></p>
@@ -80,4 +77,4 @@ const Userlogin = () => {
   );
 };
 
-export default Userlogin;
+export default Login;

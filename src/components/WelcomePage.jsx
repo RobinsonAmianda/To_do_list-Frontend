@@ -6,8 +6,8 @@ import '../Styling/WelcomePage.css'
 
 const WelcomePage = () => {
   return (
-    <div className="wrapper">
-      <div className="container">
+    <div className="wrapper1">
+      <div className="container1">
         <h1 className="heading">Welcome to task manager</h1>
         <br />
         <p className="description">Get tasks done quicker in a well managed and organised manner</p>
